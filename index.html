@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech-Shop</title>
+  <style>
+    /* Reset some default list styling */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header styles */
+    .Top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      font-family: sans-serif;
+      margin-bottom: 5px;
+    }
+
+    body {
+      background-color: black;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    /* Banner section */
+    .Banner {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .Banner .Image {
+      max-width: 50%;
+      flex-shrink: 0;
+    }
+
+    .Banner .Image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .Banner .Content {
+      flex: 1;
+      color: white;
+    }
+
+    .Banner .Content h3 {
+      margin: 0 0 10px 0;
+      font-weight: normal;
+      color: white;
+    }
+
+    .Banner .Content h1 {
+      margin: 0 0 15px 0;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .prices {
+      margin-bottom: 20px;
+    }
+
+    .original-price {
+      color: #888;
+      text-decoration: line-through;
+      margin-right: 15px;
+      font-size: 1.3rem;
+    }
+
+    .discounted-price {
+      color: #f44336;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    .Banner .Content button {
+      background-color: rgb(213, 7, 7);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .Banner .Content button:hover {
+      background-color: #b90505;
+    }
+
+    /* Responsive: stack banner vertically for small screens */
+    @media (max-width: 768px) {
+      .Banner {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .Banner .Image,
+      .Banner .Content {
+        max-width: 100%;
+      }
+
+      .Banner .Content h1 {
+        font-size: 30px;
+      }
+
+      nav ul {
+        gap: 30px;
+      }
+    }
+
+    /* Featured Products Section */
+    .Future {
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .Future h2 {
+      font-family: sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+  
+      justify-content: center;
+    }
+
+    .product {
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100px;
+      height: 100px;
+      margin: 10px auto;
+      display: block;
+    }
+
+    .product .name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product .price {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    .product .original-price {
+      color: #888;
+      text-decoration: line-through;
+      margin-right: 8px;
+    }
+
+    .product .discounted-price {
+      color: #ffffff;
+  
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header portion -->
+  <header class="Top">
+    <h2>Tech-Shop</h2>
+    <nav>
+      <ul>
+        <li><a href="#"><img src="Images/search.png" alt="Search icon" /></a></li>
+        <li><a href="#"><img src="Images/cart.png" alt="Cart icon" /></a></li>
+        <li><a href="#"><img src="Images/user-icon.jpg" alt="User icon" /></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner portion -->
+  <section class="Banner">
+    <div class="Image">
+      <img src="Images/JBL.png" alt="JBL Headphones" />
+    </div>
+    <div class="Content">
+      <h3>JBL Live 660NC</h3>
+      <h1>Keep The Noise Out, Or In. You Choose</h1>
+      <div class="prices">
+        <span class="original-price">Rs. 14,999</span>
+        <span class="discounted-price">Rs. 9,999</span>
+      </div>
+      <a href=""><button>Shop Now</button></a>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="Future">
+    <h2>Featured Products</h2>
+
+    <div class="product-list">
+      <figure class="product">
+        <figcaption class="name">Earphones</figcaption>
+        <img src="Images/Earphones.png" alt="Earphones">
+        <figcaption class="price">
+          <span class="original-price">Rs. 999</span>
+          <span class="discounted-price">Rs. 699</span>
+        </figcaption>
+      </figure>
+
+      <figure class="product">
+        <figcaption class="name">Earpods</figcaption>
+        <img src="Images/Earpodes.png" alt="Earpods">
+        <figcaption class="price">
+          <span class="original-price">Rs. 1499</span>
+          <span class="discounted-price">Rs. 999</span>
+        </figcaption>
+      </figure>
+
+      <figure class="product">
+        <figcaption class="name">Headphones</figcaption>
+        <img src="Images/Headphones.png" alt="Headphones">
+        <figcaption class="price">
+          <span class="original-price">Rs. 1399</span>
+          <span class="discounted-price">Rs. 899</span>
+        </figcaption>
+      </figure>
+
+      <figure class="product">
+        <figcaption class="name">Sony Headphones</figcaption>
+        <img src="Images/Sony-Headphones.png" alt="Sony">
+        <figcaption class="price">
+          <span class="original-price">Rs. 2299</span>
+          <span class="discounted-price">Rs. 1399</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+</body>
+
+</html>
